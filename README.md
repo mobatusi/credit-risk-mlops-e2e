@@ -1,11 +1,30 @@
-# credit-risk-mlops-e2e
+# E2E ML project using open-source MLOps tools
 
 <a target="_blank" href="https://cookiecutter-data-science.drivendata.org/">
     <img src="https://img.shields.io/badge/CCDS-Project%20template-328F97?logo=cookiecutter" />
 </a>
 
-An end-2-end mlops applied to credit risk modeling
+## Problem Description and Dataset
+The dataset consists of 32,000 rows, each representing a unique bank customer. It includes two primary types of data crucial for modeling the probability of default:
 
+Application Data: Information directly tied to the loan application, such as loan grade.
+Behavioral Data: Information about the loan recipient, such as employment length.
+The combination of application and behavioral data enhances predictive accuracy compared to using application data alone. Additionally, the dataset includes two columns that simulate data obtainable from credit bureaus, reflecting common practices in many organizations. Examples of the data available in the dataset include personal income, the loan amount as a percentage of the person's income, and credit history length. These factors can influence loan status; for instance, if the loan amount exceeds the individual's income, they might struggle to afford payments.
+
+Dataset source: [Datacamp Credit Risk Modeling in Python Course](https://assets.datacamp.com/production/repositories/4876/datasets/a2d8510b4aec8d0ac14ab9bee61ba3c085805967/cr_loan2.csv)
+
+## Use Case
+The objective is to train an ML model that returns the probability of default. We will use the XGBoost package in Python to create gradient boosted trees. We will also use logistic regression, a standard for risk modeling. After developing and testing these two powerful machine learning models, we use key performance metrics to compare them. Using advanced model selection techniques specifically for financial modeling, we will select one model. With that model, we will: develop a business strategy, estimate portfolio value, and minimize expected loss.
+
+## Setup
+Python 3.8+ is required to run code from this repo.
+```
+$ git clone https://github.com/mobatusi/credit-risk-mlops-e2e
+$ cd credit-risk-mlops-e2e
+$ virtualenv -p python3 .venv
+$ source .venv/bin/activate
+$ pip install -r requirements.txt
+```
 ## Project Organization
 
 ```
